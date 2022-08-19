@@ -1,7 +1,7 @@
 FROM alpine:3.16
 LABEL maintainer="Markus Kosmal <code@m-ko.de>"
 
-RUN apk add --no-cache bash clamav clamav-daemon clamav-libunrar
+RUN apk --update add --no-cache bash clamav clamav-daemon clamav-libunrar
 
 COPY conf /etc/clamav
 COPY bootstrap.sh /
